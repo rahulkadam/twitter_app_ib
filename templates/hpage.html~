@@ -1,0 +1,15 @@
+<html>
+<head>
+</head>
+<title>
+twitter_app
+</title>
+<body bgcolor= lightblue>
+          <center>  <h3>Twitter Score App <h3>
+     <form method="post">
+        <br><br>
+Login   <input type=text name=username><br>
+          <input type=submit name="submit" value="Submit"></center>
+     </form><br><br>
+</body>
+</html>

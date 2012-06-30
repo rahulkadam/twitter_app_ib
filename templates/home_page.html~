@@ -1,0 +1,114 @@
+<html>
+<head>
+</head>
+<title>
+twitter_app
+</title>
+<body bgcolor=lightblue>
+          <center>  <h3>Twitter Score App <h3>
+     <form method="post">
+        <br><br>
+Login   <input type=text name=username><br>
+          <input type=submit name="submit" value="Submit"></center>
+     </form><br><br>
+    <table border=0 cellpadding=1>
+    <tr>
+    <td>
+    <table border=0 width=300 cellpadding=10>      
+	<tr><td> PROFILE DETAILS </td></tr>
+     {% with messages = get_flashed_messages() %}
+          {% if messages %}            
+               <pre>
+                   {% set var1 = 0 %}
+                   {% for message in messages %}
+         <tr>
+         <td>
+
+         {% set var1 = var1 + 1 %} 
+
+         {% if var1 <= 5 %}            
+           {{message}}
+         {% endif %}
+
+        </td>
+</tr>       
+            {% endfor %} 
+               </pre>
+          {% endif %}
+     {% endwith %}
+</table>
+
+    </td>
+
+<!-----------------------------------------------------------> 
+
+    <td>
+     <table border=0 width=320 cellpadding=10 >
+	<tr><td></td>
+	</tr>    
+        <tr><td></td>
+	</tr><tr><td></td></tr>
+        <tr><td></td></tr>       
+	<tr><td>
+             FOLLOWER/FRIEND RATIO:    
+         </td></tr>
+	<tr><td>STATUS RATING:</td>
+	</tr>
+	<tr><td>FAVOURITE RATING: 
+	</td></tr>
+	<tr><td>PROFILE BACKGROUND COLOR:
+	</td></tr>
+	<tr><td>PROFILE TEXT COLOR:
+	</td></tr>
+	<tr><td>PROFILE DESCRIPTION COLOR:
+	</td></tr>
+	<tr><td>USER PROTECTION:  
+	</td></tr>
+	<tr><td>PROFILE PICTURE:
+	</td></tr>
+	<tr><td>LISTED COUNT: 
+         </td></tr>
+         <tr><td>SCORE:
+        </td></tr>
+         <tr><td>DURATION:
+        </td></tr>
+         <tr><td>PROFILE AGE SCORE:
+        </td></tr>
+         <tr><td>FINAL SCORE:
+        </td></tr>
+     </table>
+    </td>
+<!----------------------------------------------------------->   
+    <td> 
+    <table border=0 width=400  cellpadding=10>
+             
+
+     {% with messages = get_flashed_messages() %}
+          {% if messages %}            
+               <pre>
+                    {% set var1 = 0 %}
+                    {% for message in messages %}
+        
+        <tr>
+
+         {% set var1 = var1 + 1 %} 
+
+         {% if var1 > 5 %}  
+                 
+	<td>         
+	  {{message}}
+	</td>
+        
+         {% endif %}  
+         
+     </tr>
+            {% endfor %} 
+               </pre>
+          {% endif %}
+     {% endwith %}
+</table>
+</td>
+</tr>
+</table>
+</body>
+</html>
